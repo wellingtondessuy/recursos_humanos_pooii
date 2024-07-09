@@ -1,5 +1,6 @@
 package com.recursos_humanos_pooii.service;
 
+import org.hibernate.mapping.List;
 import org.springframework.stereotype.Service;
 
 import com.recursos_humanos_pooii.model.Funcionario;
@@ -24,5 +25,13 @@ public class FuncionarioService {
 
     public Funcionario buscaPorId(Long id) {
         return funcionarioRepository.findById(id).orElse(null);
+    }
+
+    public Iterable<Funcionario> buscaTodos() {
+        return funcionarioRepository.findAll();
+    }
+
+    public Iterable<Funcionario> buscaPorNome(String nome) {
+        return funcionarioRepository.findAllByNome(nome);
     }
 }

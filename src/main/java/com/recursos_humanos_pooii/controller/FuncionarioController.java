@@ -34,4 +34,9 @@ public class FuncionarioController {
     public Funcionario getMethodName(@PathVariable("id") Long id) {
         return funcionarioService.buscaPorId(id);
     }
+
+    @GetMapping("/funcionarios")
+    public Iterable<Funcionario> getMethodName(String nome) {
+        return funcionarioService.buscaPorNome(nome);
+    }
 }
