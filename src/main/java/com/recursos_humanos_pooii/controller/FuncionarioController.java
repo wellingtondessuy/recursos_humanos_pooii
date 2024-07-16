@@ -3,6 +3,7 @@ package com.recursos_humanos_pooii.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.recursos_humanos_pooii.model.Funcionario;
+import com.recursos_humanos_pooii.model.Setor;
 import com.recursos_humanos_pooii.service.FuncionarioService;
 
 import lombok.AllArgsConstructor;
@@ -10,7 +11,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -38,5 +38,19 @@ public class FuncionarioController {
     @GetMapping("/funcionarios")
     public Iterable<Funcionario> getMethodName(String nome) {
         return funcionarioService.buscaPorNome(nome);
+    }
+
+    @PostMapping("/funcionarios/{id}/salvarSetor")
+    public Funcionario postMethodName(@PathVariable("id") Long id, String nomeSetor) {
+        Setor setor = new Setor();
+        setor.setNome(nomeSetor);
+
+        Funcionario funcionario = funcionarioService.buscaPorId(id);
+
+        funcionario.setSetor(setor);
+
+        funcionarioService.salva(funcionario);
+        
+        return funcionario;
     }
 }
