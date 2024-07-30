@@ -2,6 +2,7 @@ package com.recursos_humanos_pooii.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.recursos_humanos_pooii.model.FolhaDePagamento;
 import com.recursos_humanos_pooii.model.Funcionario;
 import com.recursos_humanos_pooii.model.Setor;
 import com.recursos_humanos_pooii.service.FuncionarioService;
@@ -52,5 +53,10 @@ public class FuncionarioController {
         funcionarioService.salva(funcionario);
         
         return funcionario;
+    }
+
+    @PostMapping("/funcionarios/{id}/registra_salario")
+    public FolhaDePagamento postMethodName(@PathVariable("id") Long id) {
+        return funcionarioService.registraSalario(id);
     }
 }

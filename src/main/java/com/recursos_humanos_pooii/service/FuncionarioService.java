@@ -2,8 +2,10 @@ package com.recursos_humanos_pooii.service;
 
 import org.springframework.stereotype.Service;
 
+import com.recursos_humanos_pooii.model.FolhaDePagamento;
 import com.recursos_humanos_pooii.model.Funcionario;
 import com.recursos_humanos_pooii.model.Setor;
+import com.recursos_humanos_pooii.repository.FolhaDePagamentoRepository;
 import com.recursos_humanos_pooii.repository.FuncionarioRepository;
 import com.recursos_humanos_pooii.repository.SetorRepository;
 
@@ -12,6 +14,7 @@ import lombok.AllArgsConstructor;
 @Service
 @AllArgsConstructor
 public class FuncionarioService {
+    private FolhaDePagamentoRepository folhaDePagamentoRepository;
     private FuncionarioRepository funcionarioRepository;
     private SetorRepository setorRepository;
 
@@ -43,5 +46,19 @@ public class FuncionarioService {
 
     public Iterable<Funcionario> buscaPorNome(String nome) {
         return funcionarioRepository.findAllByNome(nome);
+    }
+
+    public FolhaDePagamento registraSalario(Long funcionarioId) {
+        Funcionario funcionario = funcionarioRepository.findById(funcionarioId).orElse(null);
+
+        if (funcionario == null) {
+
+            return null;
+        }
+
+        FolhaDePagamento folhaDePagamento = new FolhaDePagamento(funcionario);
+        folhaDePagamentoRepository.save(folhaDePagamento);
+
+        return folhaDePagamento;
     }
 }
