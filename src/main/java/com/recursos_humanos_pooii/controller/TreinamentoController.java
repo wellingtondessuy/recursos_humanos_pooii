@@ -18,11 +18,6 @@ public class TreinamentoController {
         return treinamentoService.salva(treinamento);
     }
 
-    @PostMapping("/treinamentos/deletar")
-    public void deleteMethodName(Long id) {
-        treinamentoService.deleta(id);
-    }
-
     @GetMapping("/treinamentos/{id}")
     public Treinamento getMethodName(@PathVariable("id") Long id) {
         return treinamentoService.buscaPorId(id);

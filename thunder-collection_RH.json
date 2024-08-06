@@ -1,0 +1,265 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "RH",
+    "collectionId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+    "dateExported": "2024-08-06T02:36:31.961Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6304d77a-5100-4114-ac7c-96a6c3cb5322",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Funcionário Salvar",
+            "url": "localhost:8080/funcionarios/salvar",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2024-07-30T02:33:44.140Z",
+            "modified": "2024-08-06T02:08:52.932Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "Novo Func"
+                    },
+                    {
+                        "name": "cpf",
+                        "value": "111.928.333-99"
+                    },
+                    {
+                        "name": "salario",
+                        "value": "1500"
+                    },
+                    {
+                        "name": "setor.id",
+                        "value": "4"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "99f8dab3-fa54-447a-aa17-2d394e33a685",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Funcionário Deletar",
+            "url": "localhost:8080/funcionarios/deletar",
+            "method": "POST",
+            "sortNum": 7500,
+            "created": "2024-08-06T02:21:26.451Z",
+            "modified": "2024-08-06T02:21:58.366Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "ddf7b001-d865-4a51-8fbb-c2a6eb17cce8",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Funcionario buscar",
+            "url": "localhost:8080/funcionarios/2",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-30T02:30:41.445Z",
+            "modified": "2024-08-06T02:12:02.614Z",
+            "headers": []
+        },
+        {
+            "_id": "d95d0e95-6980-4980-82c3-9b690cc42683",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Funcionario Registra Salario",
+            "url": "localhost:8080/funcionarios/7/registra_salario",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2024-07-30T02:33:15.255Z",
+            "modified": "2024-08-06T02:15:03.141Z",
+            "headers": []
+        },
+        {
+            "_id": "c137caa7-7f0e-4ff0-8222-9980c95f3e2f",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Funcionarios por nome",
+            "url": "localhost:8080/funcionarios",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-06T02:12:49.666Z",
+            "modified": "2024-08-06T02:13:32.907Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "Wellington"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "693c1c5f-5cbb-4ae7-8bee-ad9fb1022b9d",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Busca Salários",
+            "url": "localhost:8080/funcionarios/2/busca_salarios",
+            "method": "GET",
+            "sortNum": 23750,
+            "created": "2024-08-06T01:56:03.691Z",
+            "modified": "2024-08-06T01:56:03.691Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "data",
+                        "value": "2024-07-29"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "03e7f50b-2064-4283-9ea4-b19f5e36df54",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Busca salários com IRRF",
+            "url": "localhost:8080/funcionarios/busca_salarios_com_irrf",
+            "method": "GET",
+            "sortNum": 28125,
+            "created": "2024-08-06T02:04:25.558Z",
+            "modified": "2024-08-06T02:04:25.558Z",
+            "headers": []
+        },
+        {
+            "_id": "48ce9d27-fd21-4008-bb85-df3bf4e04edc",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Treinamento Buscar",
+            "url": "localhost:8080/treinamentos/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-07-30T02:31:36.846Z",
+            "modified": "2024-08-06T02:16:27.203Z",
+            "headers": []
+        },
+        {
+            "_id": "2bc81a92-1e24-4bbd-88f4-f0ca6e0dffff",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Treinamento Salvar",
+            "url": "localhost:8080/treinamentos/salvar",
+            "method": "POST",
+            "sortNum": 30625,
+            "created": "2024-07-30T02:33:22.871Z",
+            "modified": "2024-08-06T02:16:17.529Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "Banco de dados"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "03172921-d8f4-4865-ba7e-d77b1361e262",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Buscar Gerente",
+            "url": "localhost:8080/gerentes/7",
+            "method": "GET",
+            "sortNum": 31250,
+            "created": "2024-07-30T02:34:31.061Z",
+            "modified": "2024-08-06T02:14:37.305Z",
+            "headers": []
+        },
+        {
+            "_id": "4f90b24a-0c45-4574-81f0-2c200df1e6d8",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Gerente Salvar",
+            "url": "localhost:8080/gerentes/salvar",
+            "method": "POST",
+            "sortNum": 32500,
+            "created": "2024-08-06T02:07:01.181Z",
+            "modified": "2024-08-06T02:08:38.611Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "Novo gerente"
+                    },
+                    {
+                        "name": "cpf",
+                        "value": "111.928.333-99"
+                    },
+                    {
+                        "name": "adicional",
+                        "value": "300"
+                    },
+                    {
+                        "name": "salario",
+                        "value": "5000"
+                    },
+                    {
+                        "name": "setor.id",
+                        "value": "5"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "692c0d27-7c92-405e-ad3c-095131d0a2f2",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Treinamentos por nome",
+            "url": "localhost:8080/treinamentos",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-08-06T02:16:56.083Z",
+            "modified": "2024-08-06T02:20:39.708Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "Banco"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "15340598-38df-4565-91c3-eee67f116f92",
+            "colId": "5c1d752c-b5cc-41fb-a101-8fae0f91d82d",
+            "containerId": "",
+            "name": "Treinamento Adicionar Inscrito",
+            "url": "localhost:8080/treinamentos/3/inscrever/5",
+            "method": "POST",
+            "sortNum": 55000,
+            "created": "2024-07-30T02:31:16.489Z",
+            "modified": "2024-08-06T02:16:34.350Z",
+            "headers": []
+        }
+    ],
+    "ref": "z9eEJtE59dyGJt5tnezrGIA7AGP4wsWlRE-Rt2y40iI3Ls6podZJV7Aryoxx7Qjdv306Hp9ZStEPg8ggpLhlXw"
+}

@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import com.recursos_humanos_pooii.model.Treinamento;
 
 public interface TreinamentoRepository extends CrudRepository<Treinamento, Long> {
-    public Iterable<Treinamento> findAllByNome(String nome);
+    public Iterable<Treinamento> findAllByNomeContaining(String nome);
 }

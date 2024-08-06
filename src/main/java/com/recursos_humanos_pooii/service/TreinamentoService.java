@@ -18,10 +18,6 @@ public class TreinamentoService {
         return treinamentoRepository.save(funcionario);
     }
 
-    public void deleta(Long id) {
-        treinamentoRepository.deleteById(id);
-    }
-
     public Treinamento buscaPorId(Long id) {
         return treinamentoRepository.findById(id).orElse(null);
     }
@@ -31,7 +27,7 @@ public class TreinamentoService {
     }
 
     public Iterable<Treinamento> buscaPorNome(String nome) {
-        return treinamentoRepository.findAllByNome(nome);
+        return treinamentoRepository.findAllByNomeContaining(nome);
     }
 
     public Treinamento adicionaInscrito(Long treinamentoId, Long funcionarioId) {

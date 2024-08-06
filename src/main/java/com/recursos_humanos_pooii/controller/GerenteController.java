@@ -18,9 +18,7 @@ public class GerenteController {
 
     @PostMapping("/gerentes/salvar")
     public Gerente postMethodName(Gerente gerente) {
-        gerente = gerenteService.salva(gerente);
-        
-        return gerente;
+        return gerenteService.salva(gerente);
     }
 
     @GetMapping("/gerentes/{id}")

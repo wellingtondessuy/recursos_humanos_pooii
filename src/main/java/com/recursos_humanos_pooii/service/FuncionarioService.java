@@ -1,5 +1,8 @@
 package com.recursos_humanos_pooii.service;
 
+import java.sql.Date;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.recursos_humanos_pooii.model.FolhaDePagamento;
@@ -9,6 +12,7 @@ import com.recursos_humanos_pooii.repository.FolhaDePagamentoRepository;
 import com.recursos_humanos_pooii.repository.FuncionarioRepository;
 import com.recursos_humanos_pooii.repository.SetorRepository;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 @Service
@@ -27,12 +31,20 @@ public class FuncionarioService {
             }
         }
 
-        funcionarioRepository.save(funcionario);
-        
-        return funcionario;
+        return funcionarioRepository.save(funcionario);
     }
 
+    @Transactional
     public void deleta(Long id) {
+        Funcionario funcionario = funcionarioRepository.findById(id).orElse(null);
+
+        if (funcionario == null) {
+
+            return;
+        }
+        
+        folhaDePagamentoRepository.deleteByFuncionario(funcionario);
+
         funcionarioRepository.deleteById(id);
     }
 
@@ -60,5 +72,20 @@ public class FuncionarioService {
         folhaDePagamentoRepository.save(folhaDePagamento);
 
         return folhaDePagamento;
+    }
+
+    public List<FolhaDePagamento> buscaFolhaDePagamento(Long funcionarioId, Date data) {
+        Funcionario funcionario = funcionarioRepository.findById(funcionarioId).orElse(null);
+
+        if (funcionario == null) {
+
+            return null;
+        }
+
+        return folhaDePagamentoRepository.findByData(data);
+    }
+
+    public List<FolhaDePagamento> buscaFolhaDePagamentoComIrrf() {
+        return folhaDePagamentoRepository.findByIrrfGreaterThan(0f);
     }
 }
