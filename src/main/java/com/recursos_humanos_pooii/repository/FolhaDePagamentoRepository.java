@@ -8,7 +8,6 @@ import com.recursos_humanos_pooii.model.Funcionario;
 import java.util.List;
 import java.sql.Date;
 
-
 public interface FolhaDePagamentoRepository extends CrudRepository<FolhaDePagamento, Long> {
     public List<FolhaDePagamento> findByData(Date data);
 

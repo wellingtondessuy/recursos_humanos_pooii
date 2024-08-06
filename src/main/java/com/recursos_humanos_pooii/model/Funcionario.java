@@ -33,7 +33,7 @@ public class Funcionario {
     private String cpf;
     private Float salario;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Setor setor;
 
     @ManyToMany

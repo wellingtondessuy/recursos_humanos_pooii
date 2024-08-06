@@ -22,6 +22,7 @@ public class FuncionarioService {
     private FuncionarioRepository funcionarioRepository;
     private SetorRepository setorRepository;
 
+    @Transactional
     public Funcionario salva(Funcionario funcionario) {
         if (funcionario.getSetor() != null && funcionario.getSetor().getId() != null) {
             Setor setor = setorRepository.findById(funcionario.getSetor().getId()).orElse(null);
@@ -29,6 +30,7 @@ public class FuncionarioService {
             if (setor != null) {
                 funcionario.setSetor(setor);
             }
+            
         }
 
         return funcionarioRepository.save(funcionario);
